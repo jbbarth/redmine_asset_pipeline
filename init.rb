@@ -24,6 +24,10 @@ unless app.config.assets.enabled
     #config.assets.paths += Dir.glob("#{config.root}/plugins/*/assets")
     #or juste the 'all_plugins' templates, with everything concatenated/minified inside:
     config.assets.paths << File.expand_path('../assets', __FILE__)
+    #compression
+    config.assets.compress = true
+    config.assets.css_compressor = :yui
+    config.assets.js_compressor = :yui
   end
   # Manually initialize Sprockets
   Sprockets::Railtie.run_initializers(nil, app)
