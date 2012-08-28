@@ -20,8 +20,8 @@ unless app.config.assets.enabled
     config.assets.paths << "#{config.root}/public/themes"
     #avoid Sprocket's FileOutsidePaths errors:
     config.assets.paths << "#{config.root}/plugins"
-    #if we want to add all plugin directories:
-    #config.assets.paths += Dir.glob("#{config.root}/plugins/*/assets")
+    #add all plugin directories in case some js/css/images are included directly or via relative css
+    config.assets.paths += Dir.glob("#{config.root}/plugins/*/assets")
     #or juste the 'all_plugins' templates, with everything concatenated/minified inside:
     config.assets.paths << File.expand_path('../assets', __FILE__)
     #compression
