@@ -13,7 +13,6 @@ unless app.config.assets.enabled
     config.assets.prefix = ""
     config.assets.debug = false
     config.assets.compile = true
-    config.assets.paths << "#{config.root}/public"
     config.assets.paths << "#{config.root}/public/stylesheets"
     config.assets.paths << "#{config.root}/public/javascripts"
     config.assets.paths << "#{config.root}/public/images"
