@@ -20,8 +20,6 @@ unless app.config.assets.enabled
     #add all plugin directories in case some js/css/images are included directly or via relative css
     #it also avoids Sprocket's FileOutsidePaths errors
     config.assets.paths += Dir.glob("#{config.root}/plugins/*/assets")
-    #or juste the 'all_plugins' templates, with everything concatenated/minified inside:
-    config.assets.paths << File.expand_path('../assets', __FILE__)
     #compression
     config.assets.compress = true
     config.assets.css_compressor = :yui
