@@ -25,3 +25,7 @@ Features of this plugin
 * concatenate all plugin assets into one js + one css : ok
 * concatenate core resources with the ones of plugins : ok
 * compile coffeescript/sass/etc. : not tested yet
+
+Known problems
+--------------
+* for now it seems that all_plugins.js loads everything already loaded in all_core.js, resulting in unecessary wasted bandwith.
