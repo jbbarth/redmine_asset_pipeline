@@ -19,6 +19,7 @@ module ApplicationHelper
 
   # Override core helper so that it doesn't include prototype,effects,dragdrop,controls,rails,application
   def javascript_heads
+    raise "This helper override should only be used in Redmine 2.0.x" unless Redmine::VERSION.to_s.match(/^2\.0\./)
     #javascripts/ is mandatory here, otherwise /all_core.js
     #is called, which doesn't route anywhere
     tags = javascript_include_tag('javascripts/all_core')
