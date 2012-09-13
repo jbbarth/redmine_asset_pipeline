@@ -23,5 +23,5 @@ Features of this plugin
 * serve plugin assets with the asset pipeline : ok
 * minify assets in the pipeline : ok
 * concatenate all plugin assets into one js + one css : ok
-* concatenate core resources with the ones of plugins : work in progress
+* concatenate core resources with the ones of plugins : ok
 * compile coffeescript/sass/etc. : not tested yet
