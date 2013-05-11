@@ -16,17 +16,4 @@ module ApplicationHelper
     return '' if sources.last.is_a?(Hash) && sources.last.delete(:plugin)
     super
   end
-
-  # Override core helper so that it doesn't include prototype,effects,dragdrop,controls,rails,application
-  def javascript_heads
-    raise "This helper override should only be used in Redmine 2.0.x" unless Redmine::VERSION.to_s.match(/^2\.0\./)
-    #javascripts/ is mandatory here, otherwise /all_core.js
-    #is called, which doesn't route anywhere
-    tags = javascript_include_tag('javascripts/all_core')
-    unless User.current.pref.warn_on_leaving_unsaved == '0'
-      tags << "\n".html_safe + javascript_tag("Event.observe(window, 'load', function(){ new WarnLeavingUnsaved('#{escape_javascript( l(:text_warn_on_leaving_unsaved) )}'); });")
-    end
-    tags
-  end
-
 end
