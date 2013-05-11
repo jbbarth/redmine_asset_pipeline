@@ -15,15 +15,15 @@ Having the asset pipeline enabled would be interesting though if you have a lot 
 
 How ?
 -----
-The plugin reconfigures asset-related options in the main app and then re-runs sprockets initializer.
+The plugin reconfigures asset-related options in the main app.
 
 Features of this plugin
 -----------------------
-* serve main app assets with the asset pipeline : ok
-* serve plugin assets with the asset pipeline : ok
-* minify assets in the pipeline : ok
-* concatenate all plugin assets into one js + one css : ok
-* concatenate core resources with the ones of plugins : ok
+* serve main app assets with the asset pipeline : disabled
+* serve plugin assets with the asset pipeline : disabled for standard plugins ; enabled for redmine gems
+* minify assets in the pipeline : disabled
+* concatenate all plugin assets into one js + one css : ok for redmine gems
+* concatenate core resources with the ones of plugins : abandonned (useless)
 * compile coffeescript/sass/etc. : not tested yet
 
 Known problems
