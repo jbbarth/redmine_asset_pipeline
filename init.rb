@@ -1,3 +1,5 @@
+require 'redmine_asset_pipeline/version'
+
 require 'redmine'
 require 'redmine_asset_pipeline/hooks'
 
@@ -43,6 +45,6 @@ Redmine::Plugin.register :redmine_asset_pipeline do
   author 'Jean-Baptiste BARTH'
   author_url 'mailto:jeanbaptiste.barth@gmail.com'
   url 'https://github.com/jbbarth/redmine_asset_pipeline'
-  version '0.0.1'
+  version RedmineAssetPipeline::VERSION
   requires_redmine :version_or_higher => '2.0.0'
 end

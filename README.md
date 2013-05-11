@@ -29,3 +29,29 @@ Features of this plugin
 Known problems
 --------------
 * for now it seems that all_plugins.js loads everything already loaded in all_core.js, resulting in unecessary wasted bandwith.
+
+Installation
+------------
+
+This plugin is only compatible with Redmine 2.1.0+. It is distributed as a ruby gem.
+
+Add this line to your redmine's Gemfile.local:
+
+    gem 'redmine_asset_pipeline'
+
+And then execute:
+
+    $ bundle install
+
+Then restart your Redmine instance.
+
+Note that general instructions for plugins [here](http://www.redmine.org/wiki/redmine/Plugins) don't apply here.
+
+Contributing
+------------
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
