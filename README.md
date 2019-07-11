@@ -23,7 +23,7 @@ Features of this plugin
 * serve plugin assets with the asset pipeline : disabled for standard plugins ; enabled for redmine gems
 * minify assets in the pipeline : disabled
 * concatenate all plugin assets into one js + one css : ok for redmine gems
-* concatenate core resources with the ones of plugins : abandonned (useless)
+* concatenate core resources with the ones of plugins : abandoned (useless)
 * compile coffeescript/sass/etc. : not tested yet
 
 Known problems
